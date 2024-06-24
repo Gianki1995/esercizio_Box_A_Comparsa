@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background-image: url("https://images.unsplash.com/photo-1705522369595-40d0b2667739?q=80&w=1838&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box-container {
+  display: grid;
+  justify-content: center;
+  gap: 1em;
+  overflow-x: hidden;
+}
+
+.box {
+  padding: 20px;
+  width: 60%;
+  min-height: 100px;
+  min-width: 250px;
+  color: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px #333;
+  transform: translateX(500%);
+  transition: transform ease-in-out 500ms;
+  background-blend-mode: color-dodge;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-500%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h3 {
+  margin: 0;
+}
+
+.blue {
+  background-image: linear-gradient(to right, blue, transparent, blue),
+    linear-gradient(to top, blue, transparent, blue);
+  /*  background-color: blue; */
+  box-shadow: 2px 3px 2px rgb(2, 2, 54);
+}
+
+.red {
+  background-image: linear-gradient(to right, red, transparent, red),
+    linear-gradient(to top, red, transparent, red);
+  box-shadow: 2px 3px 2px rgb(82, 4, 4);
+}
+
+.green {
+  background-image: linear-gradient(to right, green, transparent, green),
+    linear-gradient(to top, green, transparent, green);
+  box-shadow: 2px 3px 2px rgb(4, 53, 4);
+}
+
+.orange {
+  background-image: linear-gradient(to right, orange, transparent, orange),
+    linear-gradient(to top, orange, transparent, orange);
+  box-shadow: 2px 3px 2px rgb(120, 80, 6);
+}
